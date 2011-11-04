@@ -1,0 +1,42 @@
+[MAIN]
+SAPIVersion=V1.0
+ApplicationName=adpdownload
+Version=0.1
+author=flex
+Company=CQT
+Email=flex.wang@cqt.com
+Engine=Svox
+Beep=no
+
+
+
+[ASR RULE]
+VarName=openclass,en-US
+openclass="open"  <@text:class>|<global>
+VarName=listapp,en-US
+listapp="list application"|<global>
+VarName=global,en-US
+global="exit"
+VarName=installapp,en-US
+installapp="install" |<global>
+VarName=uninstallapp,en-US
+uninstallapp="uninstall"|<global>
+VarName=OpenApplication,en-US
+OpenApplication="Open" <@text:app>|<global>
+
+
+
+[TTS TEXT]
+VarName=TTSWelcome,en-US
+TTSWelcome=hello, welcome to adp download. now can speech control.
+
+
+
+[CUSTOM VOICE]
+
+
+
+[COMMAND RULE]
+
+
+

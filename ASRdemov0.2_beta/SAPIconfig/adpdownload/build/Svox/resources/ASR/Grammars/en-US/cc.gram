@@ -1,0 +1,15 @@
+#JSGF V1.0;
+
+grammar command;
+
+public <top> = "communication" | "entertainment";
+
+public <global> = "help" | "cancel";
+
+public <communication> = "email" | "dial number" | "addressbook" | <rule>;
+
+public <entertainment> = "podcasts" | "radio" | "jukebox" | <rule>;
+
+<rule> =  "exit" | "options" ;
+
+

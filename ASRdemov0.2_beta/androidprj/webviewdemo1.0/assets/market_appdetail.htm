@@ -1,0 +1,99 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<script type="text/javascript" src="images/amp_cqt_applicationdownload.js"></script>
+<title>CQT-market</title>
+<style type="text/css">
+</style>
+</head>
+
+<script language="javascript">
+
+var CQT_download = new CQT_AppDownload;
+function refreshUI()
+{
+ var strHtml = ""; 
+ var i = 0;
+ var strid;
+ var strappID;
+ strid = CQT_download.GetCook("AppID");
+ document.getElementById("DetailAppName").innerHTML = CQT_download.AP_GetName(strid);
+ 
+ strHtml += "<li>Version:";
+ strHtml += CQT_download.AP_GetVersion(strid);
+ strHtml += "</li>";
+  
+ strHtml += "<li>Price:";
+ strHtml += CQT_download.AP_GetPrice(strid);
+ strHtml += "</li>";
+
+ strHtml += "<li>Company:";
+ strHtml += CQT_download.AP_GetCompany(strid);
+ strHtml += "</li>";
+  
+ strHtml += "<li>Star:";
+ strHtml += CQT_download.AP_GetStar(strid);
+ strHtml += "</li>";
+  
+ strHtml += "<li>Describe:";
+ strHtml += CQT_download.AP_GetDescribe(strid);
+ strHtml += "</li>";
+ 
+ document.getElementById("AppName").innerHTML = strHtml; 
+ 
+ var nret = CQT_download.IsInstallPackage(strid);
+ if(nret == 1)
+ {
+   document.getElementById("buttontypee").innerHTML = "<input type=\"submit\" value=\"Uninstall\" onclick=\"ApplicationInstall()\"/>";
+ }else
+ {
+   document.getElementById("buttontypee").innerHTML = "<input type=\"submit\" value=\"Install\" onclick=\"ApplicationInstall()\"/>";
+ }
+}
+
+function ClickAppName(strid)
+{
+  //document.getElementById("DebugInfo").innerHTML = strid;
+}
+
+function ApplicationDtailInit()
+{
+ var strid;
+ strid = CQT_download.GetCook("AppID");
+ refreshUI();
+}
+
+function ApplicationInstall()
+{
+ var strid;
+ strid = CQT_download.GetCook("AppID");
+ 
+ var nret = CQT_download.IsInstallPackage(strid);
+ if(nret == 1)
+ {
+   CQT_download.UnintallPackage(strid);
+ }else
+ {
+   CQT_download.InstallPackage(strid);
+ } 
+}
+</script>
+
+<body onLoad="ApplicationDtailInit()">
+<div class=context>
+
+<!-- 列表 -->
+<div id=DetailAppName>CQT Application Detail version 2.0：</div>
+<div id=buttontypee></div>
+
+<div id=divlist>
+<ul id=AppName>
+</ul>
+</div>
+
+<!-- end -->
+</div>
+
+</body>
+</html>

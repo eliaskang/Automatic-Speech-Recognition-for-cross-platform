@@ -1,0 +1,165 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<script type="text/javascript" src="images/amp_cqt_applicationdownload.js"></script>
+<script type="text/javascript" src="images/amp_cqt_sapi.js"></script>
+<title>CQT-market</title>
+<style type="text/css">
+<!--
+.context #divlist #classnames .liclass {
+}
+.context #divlist #classnames #class1 {
+}
+-->
+</style>
+</head>
+
+<script language="javascript">
+
+var CQT_download = new CQT_AppDownload;
+var cqtsapi = new CQT_SAPI;
+var startASRTimer;
+var StopASRTimer;
+
+function StartASR()
+{
+  cqtsapi.JS_SAPI_Lo_ASRRule("openclass");
+}
+
+function StopASR()
+{
+ cqtsapi.JS_SAPI_Stop();
+}
+
+function InitSapiVarName()
+{
+ //设置分类信息,可以设别出来 
+ var strDebugInfo = "";
+ var strName;
+ var iCount = CQT_download.Class_GetCount(); 
+ var i = 0;
+ 
+ cqtsapi.JS_SAPI_ASRClear("@text:class");
+ for(i = 0; i < iCount; i++)
+ {
+   strName = CQT_download.Class_GetName(i);
+   //cqtsapi.JS_SAPI_SetASRRuleValue("@text:class","CQT");
+   cqtsapi.JS_SAPI_SetASRRuleValue("@text:class",strName);
+   strDebugInfo+=strName;
+ }
+ 
+ //cqtsapi.JS_SAPI_Lo_ASRRule("openclass");
+ startASRTimer=setTimeout(StartASR,1000); 
+ strDebugInfo+="StartASR";
+ document.getElementById("DebugInfo").innerHTML = strDebugInfo;
+}
+
+function refreshUI()
+{
+ var strHtml = "";
+ var i = 0;
+ var iCount = CQT_download.Class_GetCount();
+ 
+ for(i = 0; i < iCount; i++)
+ {
+  strHtml += "<li onClick=\"clickclassName('";
+  strHtml += CQT_download.Class_GetID(i);
+  strHtml += "')\">";
+  strHtml += "<img src='";
+  strHtml += CQT_download.Class_GetImg(i);
+  strHtml += "' width='39' height='36'>";
+  strHtml += CQT_download.Class_GetName(i);
+  strHtml += "</li>";
+ }
+ document.getElementById("classnames").innerHTML = strHtml;
+ 
+ InitSapiVarName();  
+}
+ 
+
+function clickclassName(strid)
+{
+  document.getElementById("DebugInfo").innerHTML = strid;
+  CQT_download.SetCook("ClassID",strid);
+  //window.open("http://www.baidu.com");
+  window.open("market_app.htm");
+  //window.location.href="demo.html";
+  //CQT_download.OpenURL("market_app.htm");
+  
+  
+  //进入下一个页面，需要把当前的工作停掉
+  StopASRTimer=setTimeout(StopASR,1000);  
+}
+
+function callback_Debuginfo(strInfo)
+{
+}
+
+function callback_ASRResult(strResult)
+{   
+   var strCommandFind = "no";
+   var iCount = CQT_download.Class_GetCount(); 
+   
+   var strName;
+   var strClassID;
+   
+   strClassID = CQT_download.Class_GetID(0);
+   document.getElementById("DebugInfo").innerHTML = "Open:" + strClassID;
+   clickclassName(strClassID);
+
+   /*
+   for(i = 0; i < iCount; i++)
+   {   
+     strName = "open "
+     strName += CQT_download.Class_GetName(i);
+     if(strName == strResult)
+     {
+       strClassID = CQT_download.Class_GetID(i);
+       clickclassName(strClassID);
+       strCommandFind = "yes";
+       break;
+     }
+   }
+   
+   if(strCommandFind == "no")
+   {
+     startASRTimer=setTimeout(StartASR,1000);
+   }*/
+}
+
+function SAPIinit()
+{
+ var strResoucePath="/mnt/sdcard";
+ var strConfigName="adpdownload";
+ 
+ cqtsapi.JS_SAPI_Init(strResoucePath,strConfigName);
+ //refreshUI();
+}
+
+function downloadinit()
+{
+ refreshUI();
+ SAPIinit();
+}
+
+</script>
+
+<body onLoad="downloadinit()">
+<div class=context>
+
+<!-- 列表 -->
+<div>CQT Application Class version 2.0：</div>
+<div id=divlist>
+<ul id=classnames>
+</ul>
+
+</div>
+
+<div id="DebugInfo"></div>
+
+<!-- end -->
+</div>
+
+</body>
+</html>

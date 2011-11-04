@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<script type="text/javascript" src="images/amp_cqt_sapi.js"></script>
+<title>CQT-SAPI</title>
+<style type="text/css">
+<!--
+.context #divlist #classnames .liclass {
+}
+.context #divlist #classnames #class1 {
+}
+-->
+</style>
+</head>
+
+<script language="javascript">
+
+var cqtsapi = new CQT_SAPI;
+
+function StartLoASRValue()
+{
+ var strASRVar = "";
+ strASRVar = document.getElementById("textASRVar").value;
+ cqtsapi.JS_SAPI_Lo_ASRRule(strASRVar);
+}
+
+function StartLoTTSValue()
+{
+ var strTTSVar = "";
+ strTTSVar = document.getElementById("textTTSVar").value;
+ cqtsapi.JS_SAPI_Lo_TTSRule(strTTSVar);
+}
+
+function StartLoVoiceValue()
+{
+ var strVoiceVar = "";
+ strVoiceVar = document.getElementById("textVoiceVar").value;
+ cqtsapi.JS_SAPI_Lo_VoiceRule(strVoiceVar);
+}
+
+function StartTTSText()
+{
+ var strTTSText = "";
+ strTTSText = document.getElementById("textTTSText").value;
+ cqtsapi.JS_SAPI_Lo_TTSText(strTTSText);
+}
+
+//该函数在系统刷新界面的时候会调用
+function refreshUI()
+{
+ cqtsapi.JS_SAPI_ASRClear("@text:class");
+ cqtsapi.JS_SAPI_ASRClear("@text:app");
+ 
+ cqtsapi.JS_SAPI_SetASRRuleValue("@text:class","office");
+ cqtsapi.JS_SAPI_SetASRRuleValue("@text:class","game");
+ cqtsapi.JS_SAPI_SetASRRuleValue("@text:class","sport");
+ cqtsapi.JS_SAPI_SetASRRuleValue("@text:class","application");
+}
+
+function callback_Debuginfo(strInfo)
+{
+ var strText = "";
+ strText = document.getElementById("DebugInfo").innerHTML;
+ strText = strText + strInfo;
+ strText = strText + "<br>";
+ document.getElementById("DebugInfo").innerHTML = strText;
+}
+
+function callback_ASRResult(strResult)
+{
+ var strText = "ASR Result:"; 
+ strText = strText + strResult;
+ document.getElementById("ResultInfo").innerHTML = strText;
+}
+
+function SAPIinit()
+{
+ var strResoucePath="/mnt/sdcard";
+ //var strResoucePath="/data/data/testsapi";
+ var strConfigName="adpdownload";
+ //var strConfigName="test";
+ 
+ //document.getElementById("textASRVar").value = "openclass";
+ //document.getElementById("textTTSVar").value = "TTSWelcome";
+ //document.getElementById("textTTSVar").value = "sayhello"; 
+ cqtsapi.JS_SAPI_Init(strResoucePath,strConfigName);
+ refreshUI();
+}
+</script>
+
+<body onLoad="SAPIinit()">
+<div class=context>
+
+<div>CQT Application Class version 2.0：</div>
+
+<div><input type="submit" value="Start High Level" onclick="cqtsapi.JS_SAPI_Hi_Start()"/></div>
+<div><input type="submit" value="Start ASR Rule" onclick="StartLoASRValue()"/><textarea id="textASRVar" value="openclass" cols="20" rows="1"></textarea></div>
+<div><input type="submit" value="Start TTS Rule" onclick="StartLoTTSValue()"/><textarea id="textTTSVar" value="TTSWelcome" cols="20" rows="1"></textarea></div>
+<div><input type="submit" value="Start TTS Rule" onclick="StartLoVoiceValue()"/><textarea id="textVoiceVar" value="" cols="20" rows="1"></textarea></div>
+<div><input type="submit" value="Start TTS Text" onclick="StartTTSText()"/><textarea id="textTTSText" value="" cols="20" rows="1"></textarea></div>
+
+<div id="ResultInfo"></div>
+<div id="DebugInfo"></div>
+</div>
+
+</body>
+</html>

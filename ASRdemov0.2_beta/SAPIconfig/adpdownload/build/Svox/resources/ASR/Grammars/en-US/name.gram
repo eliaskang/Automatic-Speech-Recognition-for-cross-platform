@@ -1,0 +1,7 @@
+#JSGF V1.0;
+
+grammar name;
+
+public <1001> = "call" <@text:name> {name_tag} [ "mobile" | "office" | "home" ] {extension_tag};
+
+

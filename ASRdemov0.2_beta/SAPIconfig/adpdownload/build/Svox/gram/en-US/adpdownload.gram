@@ -1,0 +1,8 @@
+#JSGF V1.0 UTF-8 en-US;
+grammar adpdownload;
+public <openclass> = "open"  <@text:class>|<global>;
+public <listapp> = "list application"|<global>;
+public <global> = "exit";
+public <installapp> = "install" |<global>;
+public <uninstallapp> = "uninstall"|<global>;
+public <OpenApplication> = "Open" <@text:app>|<global>;

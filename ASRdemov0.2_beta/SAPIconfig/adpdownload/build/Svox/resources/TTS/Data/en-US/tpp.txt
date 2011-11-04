@@ -1,0 +1,27 @@
+# Project(s): internal test
+# Version:    1.0
+# Date:     03/12/2009
+
+NETWORK CONTEXTEXTENSIONS_ISS
+NETWORKCOST = -1000
+
+PRODUCTIONS
+
+ISS_RULES =
+   'day' Out<'week'>
+ | 'have a nice day.' Out<'SVOX','wishes','a','nice','day','.'>
+ | 'SPELL' Out<spell<'S'>, spell<'P'>, spell<'E'>, spell<'L'>, spell<'L'>>
+ | 'AUDIO FILE' Out<play<'test.wav'>,'audio','file','not','found.',play<end>>
+ | 'BEEP' Out<play<'beep.wav'>,'beep',play<end>>
+ .
+
+CONTEXTS
+
+CONTEXT DEFAULT = 
+.
+
+CONTEXT ISS = 
+  ENABLE SYSTEM DEFAULT
+  ENABLE CONTEXTEXTENSIONS_ISS ISS_RULES
+.
+

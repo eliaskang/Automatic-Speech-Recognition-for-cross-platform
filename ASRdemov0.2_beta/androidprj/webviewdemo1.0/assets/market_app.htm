@@ -1,0 +1,130 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<script type="text/javascript" src="images/amp_cqt_applicationdownload.js"></script>
+<title>CQT-market</title>
+<style type="text/css">
+</style>
+</head>
+
+<script language="javascript">
+
+var CQT_download = new CQT_AppDownload;
+var cqtsapi = new CQT_SAPI;
+var startASRTimer;
+var StopASRTimer;
+
+function StartASR()
+{
+  cqtsapi.JS_SAPI_Lo_ASRRule("installapp");
+}
+
+function StopASR()
+{
+ cqtsapi.JS_SAPI_Stop();
+}
+
+function InitSapiVarName()
+{ 
+ var i = 0;
+ var strid;
+ var strAppname;
+ var strappID;
+ strid = CQT_download.GetCook("ClassID");
+ var iCount = CQT_download.CLASS_AP_GetCount(strid);
+ 
+ cqtsapi.JS_SAPI_ASRClear("@text:app");
+ for(i = 0; i < iCount; i++)
+ {
+  strappID = CQT_download.CLASS_AP_GetAppID(strid,i);  
+  strAppname = CQT_download.AP_GetName(strappID); 
+  cqtsapi.JS_SAPI_SetASRRuleValue("text:app",strName);
+ }
+ 
+ startASRTimer=setTimeout(StartASR,1000);  
+}
+
+function refreshUI()
+{
+ var strHtml = ""; 
+ var i = 0;
+ var strid;
+ var strappID;
+ strid = CQT_download.GetCook("ClassID");
+ var iCount = CQT_download.CLASS_AP_GetCount(strid);
+ 
+ for(i = 0; i < iCount; i++)
+ {
+  strappID = CQT_download.CLASS_AP_GetAppID(strid,i);
+  strHtml += "<li onClick=\"ClickAppName('";
+  strHtml += strappID;
+  strHtml += "')\">";
+  strHtml += "<img src='";
+  strHtml += CQT_download.AP_GetImg(strappID);
+  strHtml += "' width='39' height='36'>";
+  strHtml += CQT_download.AP_GetName(strappID);
+  strHtml += "</li>";
+ }
+ 
+  document.getElementById("AppName").innerHTML = strHtml;
+  InitSapiVarName();
+}
+
+function ClickAppName(strid)
+{
+  //document.getElementById("DebugInfo").innerHTML = strid;
+  CQT_download.SetCook("AppID",strid);
+  //window.open("http://www.baidu.com");
+  window.open("market_appdetail.htm");
+  //window.location.href="demo.html";
+  //CQT_download.OpenURL("demo.html");
+}
+
+function callback_Debuginfo(strInfo)
+{
+}
+
+function callback_ASRResult(strResult)
+{   
+   var strappID;
+   var strClassid;
+   strClassid = CQT_download.GetCook("ClassID");
+   strappID = CQT_download.CLASS_AP_GetAppID(strClassid,0);  
+   
+   ClickAppName(strappID);   
+   return "123";  
+}
+
+
+function downloadinit()
+{
+ var strDebugInfo;
+ var strid;
+ strid = CQT_download.GetCook("ClassID");
+ strDebugInfo = "ClassID:";
+ strDebugInfo += strid;
+ document.getElementById("DebugInfo").innerHTML = strDebugInfo;
+ refreshUI();
+}
+
+</script>
+
+<body onLoad="downloadinit()">
+<div class=context>
+
+<!-- 列表 -->
+<div>CQT Application Class version 2.0：</div>
+<div id=divlist>
+<ul id=AppName>
+</ul>
+
+</div>
+
+<div id="DebugInfo"></div>
+
+<!-- end -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+
+SVOXAUTOUSERPREPROC = "OFF"
+SVOXAUTOUSERLEX     = "OFF"
+SVOXAUTOUSERPHONLEX = "OFF"
+
+SVOXLDPAUTOFILE = "${SVOXCONFIGPATH}../Extensions/ldp_all.pil"
+SVOXPCPAUTOFILE = "${SVOXCONFIGPATH}../Extensions/pcp_xsampa-all.pil"
+SVOXPXPAUTOFILE = "${SVOXCONFIGPATH}../Extensions/pxp_x-all-all.pil"
+
+##############################################################################
+# ar-XA voices
+##############################################################################
+VOICE "ar-XA" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ar-XA/"
+    SVOXMAINFILE       = "svox-zn5co0ar-XA22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ar-XA/"
+)
+
+VOICE "Malik" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ar-XA/"
+    SVOXMAINFILE       = "svox-zn5co0ar-XA22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ar-XA/"
+)
+
+##############################################################################
+# cs-CZ voices
+##############################################################################
+VOICE "cs-CZ" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}cs-CZ/"
+    SVOXMAINFILE       = "svox-pm0co0cs-CZ22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/cs-CZ/"
+)
+
+VOICE "Iveta" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}cs-CZ/"
+    SVOXMAINFILE       = "svox-pm0co0cs-CZ22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/cs-CZ/"
+)
+
+##############################################################################
+# da-DK voices
+##############################################################################
+VOICE "da-DK" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}da-DK/"
+    SVOXMAINFILE       = "svox-js1co0da-DK22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/da-DK/"
+)
+
+VOICE "Sara" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}da-DK/"
+    SVOXMAINFILE       = "svox-js1co0da-DK22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/da-DK/"
+)
+
+##############################################################################
+# de-DE voices
+##############################################################################
+VOICE "de-DE" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}de-DE/"
+    SVOXMAINFILE       = "svox-gl0co0de-DE22.pil"
+#   SVOXMAINFILE       = "svox-ag5co0de-DE22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/de-DE/"
+)
+
+VOICE "Petra" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}de-DE/"
+    SVOXMAINFILE       = "svox-gl0co0de-DE22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/de-DE/"
+)
+
+VOICE "Markus" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}de-DE/"
+    SVOXMAINFILE       = "svox-ag5co0de-DE22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/de-DE/"
+)
+
+##############################################################################
+# el-GR voices
+##############################################################################
+VOICE "el-GR" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}el-GR/"
+    SVOXMAINFILE       = "svox-eb0co0el-GR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/el-GR/"
+)
+
+VOICE "Ariadne" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}el-GR/"
+    SVOXMAINFILE       = "svox-eb0co0el-GR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/el-GR/"
+)
+
+##############################################################################
+# en-GB voices
+##############################################################################
+VOICE "en-GB" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}en-GB/"
+    SVOXMAINFILE       = "svox-kh0co0en-GB22.pil"
+#   SVOXMAINFILE       = "svox-tb5co0en-GB22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/en-GB/"
+)
+
+VOICE "Victoria" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}en-GB/"
+    SVOXMAINFILE       = "svox-kh0co0en-GB22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/en-GB/"
+)
+
+VOICE "Oliver" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}en-GB/"
+    SVOXMAINFILE       = "svox-tb5co0en-GB22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/en-GB/"
+)
+
+##############################################################################
+# en-US voices
+##############################################################################
+VOICE "en-US" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}en-US/"
+    SVOXMAINFILE       = "svox-lh0co0en-US22.pil"
+#   SVOXMAINFILE       = "svox-kr0co0en-US22.pil"
+#   SVOXMAINFILE       = "svox-mh5co0en-US22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/en-US/"
+)
+
+VOICE "Grace" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}en-US/"
+    SVOXMAINFILE       = "svox-lh0co0en-US22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/en-US/"
+)
+
+VOICE "Samantha" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}en-US/"
+    SVOXMAINFILE       = "svox-kr0co0en-US22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/en-US/"
+)
+
+VOICE "Michael" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}en-US/"
+    SVOXMAINFILE       = "svox-mh5co0en-US22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/en-US/"
+)
+
+##############################################################################
+# es-ES voices
+##############################################################################
+VOICE "es-ES" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}es-ES/"
+    SVOXMAINFILE       = "svox-zl0co0es-ES22.pil"
+#   SVOXMAINFILE       = "svox-ar5co0es-ES22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/es-ES/"
+)
+
+VOICE "Noelia" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}es-ES/"
+    SVOXMAINFILE       = "svox-zl0co0es-ES22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/es-ES/"
+)
+
+VOICE "Pablo" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}es-ES/"
+    SVOXMAINFILE       = "svox-ar5co0es-ES22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/es-ES/"
+)
+
+##############################################################################
+# es-MX voices
+##############################################################################
+VOICE "es-MX" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}es-MX/"
+    SVOXMAINFILE       = "svox-zd0co0es-MX22.pil"
+#   SVOXMAINFILE       = "svox-ec5co0es-MX22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/es-MX/"
+)
+
+VOICE "Angelica" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}es-MX/"
+    SVOXMAINFILE       = "svox-zd0co0es-MX22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/es-MX/"
+)
+
+VOICE "Juan" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}es-MX/"
+    SVOXMAINFILE       = "svox-ec5co0es-MX22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/es-MX/"
+)
+
+##############################################################################
+# fi-FI voices
+##############################################################################
+VOICE "fi-FI" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fi-FI/"
+    SVOXMAINFILE       = "svox-th0co0fi-FI22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fi-FI/"
+)
+
+VOICE "Satu" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fi-FI/"
+    SVOXMAINFILE       = "svox-th0co0fi-FI22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fi-FI/"
+)
+
+##############################################################################
+# fr-CA voices
+##############################################################################
+VOICE "fr-CA" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fr-CA/"
+    SVOXMAINFILE       = "svox-ml0co0fr-CA22.pil"
+#   SVOXMAINFILE       = "svox-sb6co0fr-CA22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fr-CA/"
+)
+
+VOICE "Chantal" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fr-CA/"
+    SVOXMAINFILE       = "svox-ml0co0fr-CA22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fr-CA/"
+)
+
+VOICE "Nicolas" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fr-CA/"
+    SVOXMAINFILE       = "svox-sb6co0fr-CA22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fr-CA/"
+)
+
+##############################################################################
+# fr-FR voices
+##############################################################################
+VOICE "fr-FR" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fr-FR/"
+    SVOXMAINFILE       = "svox-nk0co0fr-FR22.pil"
+#   SVOXMAINFILE       = "svox-bm5co0fr-FR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fr-FR/"
+)
+
+VOICE "Aurelie" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fr-FR/"
+    SVOXMAINFILE       = "svox-nk0co0fr-FR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fr-FR/"
+)
+
+VOICE "Luc" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}fr-FR/"
+    SVOXMAINFILE       = "svox-bm5co0fr-FR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/fr-FR/"
+)
+
+##############################################################################
+# hu-HU voices
+##############################################################################
+VOICE "hu-HU" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}hu-HU/"
+    SVOXMAINFILE       = "svox-mh0co0hu-HU22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/hu-HU/"
+)
+
+VOICE "Mariska" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}hu-HU/"
+    SVOXMAINFILE       = "svox-mh0co0hu-HU22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/hu-HU/"
+)
+
+##############################################################################
+# it-IT voices
+##############################################################################
+VOICE "it-IT" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}it-IT/"
+    SVOXMAINFILE       = "svox-cm0co0it-IT22.pil"
+#   SVOXMAINFILE       = "svox-js5co0it-IT22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/it-IT/"
+)
+
+VOICE "Bianca" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}it-IT/"
+    SVOXMAINFILE       = "svox-cm0co0it-IT22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/it-IT/"
+)
+
+VOICE "Marco" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}it-IT/"
+    SVOXMAINFILE       = "svox-js5co0it-IT22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/it-IT/"
+)
+
+##############################################################################
+# ja-JP voices
+##############################################################################
+VOICE "ja-JP" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ja-JP/"
+    SVOXMAINFILE       = "svox-so0co0ja-JP22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ja-JP/"
+)
+
+VOICE "Misaki" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ja-JP/"
+    SVOXMAINFILE       = "svox-so0co0ja-JP22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ja-JP/"
+)
+
+##############################################################################
+# ko-KR voices
+##############################################################################
+VOICE "ko-KR" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ko-KR/"
+    SVOXMAINFILE       = "svox-sl1co0ko-KR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ko-KR/"
+)
+
+VOICE "Sora" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ko-KR/"
+    SVOXMAINFILE       = "svox-sl1co0ko-KR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ko-KR/"
+)
+
+##############################################################################
+# nl-NL voices
+##############################################################################
+VOICE "nl-NL" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}nl-NL/"
+    SVOXMAINFILE       = "svox-ck0co0nl-NL22.pil"
+#   SVOXMAINFILE       = "svox-ih5co0nl-NL22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/nl-NL/"
+)
+
+VOICE "Lena" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}nl-NL/"
+    SVOXMAINFILE       = "svox-ck0co0nl-NL22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/nl-NL/"
+)
+
+VOICE "Jan" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}nl-NL/"
+    SVOXMAINFILE       = "svox-ih5co0nl-NL22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/nl-NL/"
+)
+
+##############################################################################
+# no-NO voices
+##############################################################################
+VOICE "no-NO" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}no-NO/"
+    SVOXMAINFILE       = "svox-cg0co0no-NO22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/no-NO/"
+)
+
+VOICE "Nora" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}no-NO/"
+    SVOXMAINFILE       = "svox-cg0co0no-NO22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/no-NO/"
+)
+
+##############################################################################
+# pl-PL voices
+##############################################################################
+VOICE "pl-PL" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}pl-PL/"
+    SVOXMAINFILE       = "svox-es0co0pl-PL22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/pl-PL/"
+)
+
+VOICE "Eva" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}pl-PL/"
+    SVOXMAINFILE       = "svox-es0co0pl-PL22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/pl-PL/"
+)
+
+##############################################################################
+# pt-BR voices
+##############################################################################
+VOICE "pt-BR" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}pt-BR/"
+    SVOXMAINFILE       = "svox-rb0co0pt-BR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/pt-BR/"
+)
+
+VOICE "Luciana" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}pt-BR/"
+    SVOXMAINFILE       = "svox-rb0co0pt-BR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/pt-BR/"
+)
+
+##############################################################################
+# pt-PT voices
+##############################################################################
+VOICE "pt-PT" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}pt-PT/"
+    SVOXMAINFILE       = "svox-fb0co0pt-PT22.pil"
+#   SVOXMAINFILE       = "svox-fs5co0pt-PT22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/pt-PT/"
+)
+
+VOICE "Catarina" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}pt-PT/"
+    SVOXMAINFILE       = "svox-fb0co0pt-PT22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/pt-PT/"
+)
+
+VOICE "Joaquim" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}pt-PT/"
+    SVOXMAINFILE       = "svox-fs5co0pt-PT22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/pt-PT/"
+)
+
+##############################################################################
+# ru-RU voices
+##############################################################################
+VOICE "ru-RU" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ru-RU/"
+    SVOXMAINFILE       = "svox-mk0co0ru-RU22.pil"
+#   SVOXMAINFILE       = "svox-gm5co0ru-RU22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ru-RU/"
+)
+
+VOICE "Katja" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ru-RU/"
+    SVOXMAINFILE       = "svox-mk0co0ru-RU22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ru-RU/"
+)
+
+VOICE "Yuri" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}ru-RU/"
+    SVOXMAINFILE       = "svox-gm5co0ru-RU22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/ru-RU/"
+)
+
+##############################################################################
+# sv-SE voices
+##############################################################################
+VOICE "sv-SE" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}sv-SE/"
+    SVOXMAINFILE       = "svox-js0co0sv-SE22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/sv-SE/"
+)
+
+VOICE "Klara" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}sv-SE/"
+    SVOXMAINFILE       = "svox-js0co0sv-SE22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/sv-SE/"
+)
+
+##############################################################################
+# tr-TR voices
+##############################################################################
+VOICE "tr-TR" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}tr-TR/"
+    SVOXMAINFILE       = "svox-fb1co0tr-TR22.pil"
+#   SVOXMAINFILE       = "svox-sb5co0tr-TR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/tr-TR/"
+)
+
+VOICE "Leyla" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}tr-TR/"
+    SVOXMAINFILE       = "svox-fb1co0tr-TR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/tr-TR/"
+)
+
+VOICE "Cem" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}tr-TR/"
+    SVOXMAINFILE       = "svox-sb5co0tr-TR22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/tr-TR/"
+)
+
+##############################################################################
+# yue-CN voices
+##############################################################################
+VOICE "yue-CN" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}yue-CN/"
+    SVOXMAINFILE       = "svox-lp0co0yue-CN22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/yue-CN/"
+)
+
+VOICE "Hei Wan" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}yue-CN/"
+    SVOXMAINFILE       = "svox-lp0co0yue-CN22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/yue-CN/"
+)
+
+##############################################################################
+# zh-CN voices
+##############################################################################
+VOICE "zh-CN" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}zh-CN/"
+    SVOXMAINFILE       = "svox-jw0co0zh-CN22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/zh-CN/"
+)
+
+VOICE "Yun" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}zh-CN/"
+    SVOXMAINFILE       = "svox-jw0co0zh-CN22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/zh-CN/"
+)
+
+##############################################################################
+# zh-TW voices
+##############################################################################
+VOICE "zh-TW" (
+    SVOXLINGWAREPATH   = "${SVOXCONFIGPATH}zh-TW/"
+    SVOXMAINFILE       = "svox-cy0co0zh-TW22.pil"
+    SVOXENGINEFILEPATH = "${SVOXCONFIGPATH}../Data/zh-TW/"
+)
+
